@@ -1,9 +1,9 @@
 import arcpy
 import os
 
-# ------------------ INPUT GDB PATHS ------------------
-geo_gdb  = r"D:\GIS_work\BAR_BAR_Wazirpur_Geo.gdb"
-edgm_gdb = r"D:\GIS_work\BAR_BAR_Wazirpur_MG.gdb"
+#INPUT GDB PATHS
+geo_gdb  = r"D:\GIS_work\BAR_BAR_Wazirpur_Geo.gdb" #Location of the geo geodatabase
+edgm_gdb = r"D:\GIS_work\BAR_BAR_Wazirpur_MG.gdb" #Location of the edgematch geodatabase
 
 
 def get_mg_layers(gdb):
@@ -52,4 +52,5 @@ else:
     if extra_in_edgm:
         print("\nExtra in Edgm GDB:")
         for fc in sorted(extra_in_edgm):
+
             print("  ", fc)
